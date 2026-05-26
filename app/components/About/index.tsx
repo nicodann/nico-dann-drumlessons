@@ -12,7 +12,7 @@ export default function About() {
     {
       label: "Pravate Study",
       detail:
-        "I've been blessed with many great teachers including Jim Black, Jim Blackley, Remy Bolduc, Antonio Hart, Dave Patel, Michelle Lambert, Chris McCann, Bob Moses, John Riley and Nasheet Waits",
+        "I've been fortunate to be able to study with many great teachers, including Jim Black, Jim Blackley, Remy Bolduc, Antonio Hart, Dave Patel, Michelle Lambert, Chris McCann, Bob Moses, John Riley and Nasheet Waits",
     },
   ];
 
@@ -34,9 +34,10 @@ export default function About() {
           <p>
             As an educator, I believe every student is different. I tailor every
             lesson to match your personal goals, your interests, and your pace.
-            Whether you&rsquo;re a seven-year-old hitting a drum for the first
-            time or an adult picking up sticks again after years away, my job is
-            to make the experience fun, rewarding, and musical from day one.
+            Whether you&rsquo;re an adult hitting a cymbal for the first time or
+            a seven-year-old who's been playing in the family band since the age
+            of three, my job is to make the experience fun, rewarding, and
+            musical from day one.
           </p>
           <p>
             I&rsquo;ve taught privately and in schools for over 15 years,

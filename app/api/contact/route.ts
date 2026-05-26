@@ -8,7 +8,7 @@ import { google } from "googleapis";
  *   GMAIL_CLIENT_ID
  *   GMAIL_CLIENT_SECRET
  *   GMAIL_REFRESH_TOKEN
- *   GMAIL_USER  (your gmail address, e.g. nicodann@gmail.com)
+ *   GMAIL_USER  (your gmail address, e.g. you@gmail.com)
  *
  * To get a refresh token:
  *   1. Create an OAuth2 app in Google Cloud Console
@@ -26,13 +26,13 @@ export async function POST(req: NextRequest) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "All fields are required." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     const oauth2Client = new google.auth.OAuth2(
       process.env.GMAIL_CLIENT_ID,
-      process.env.GMAIL_CLIENT_SECRET
+      process.env.GMAIL_CLIENT_SECRET,
     );
 
     oauth2Client.setCredentials({
@@ -41,7 +41,10 @@ export async function POST(req: NextRequest) {
 
     const gmail = google.gmail({ version: "v1", auth: oauth2Client });
 
-    const to = process.env.GMAIL_USER ?? "nicodann@gmail.com";
+    const to = process.env.GMAIL_USER;
+    if (!to) {
+      throw new Error("GMAIL_USER environment variable is not set.");
+    }
 
     const rawMessage = [
       `From: ${to}`,
@@ -73,7 +76,7 @@ export async function POST(req: NextRequest) {
     console.error("Contact form error:", error);
     return NextResponse.json(
       { error: "Failed to send message." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

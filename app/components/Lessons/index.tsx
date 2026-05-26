@@ -11,7 +11,7 @@ export default function Lessons({
       icon: "🥁",
       title: "Private Drum Lessons",
       description:
-        "One-on-one instruction tailored to your level and goals. Topics can include technique, reading, rudiments, styles, and — most importantly — making music.",
+        "One-on-one instruction tailored to your level and goals. Topics can include technique, reading, rudiments, styles, and — most importantly — making beautiful sounds!",
     },
     {
       icon: "🎵",
