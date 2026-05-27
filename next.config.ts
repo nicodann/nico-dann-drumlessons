@@ -1,7 +1,5 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  basePath: "/lessons",
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
