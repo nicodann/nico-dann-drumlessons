@@ -32,7 +32,9 @@ export default function About() {
             and classical concert halls.
           </p>
           <p>
-            As an educator, I believe every student is different. I tailor every
+            As an educator, I believe every student learns differently as we are
+            all unique people. I'm commited to fostering an environment that is
+            welcoming, queer positive, and neuro-inclusive. I tailor every
             lesson to match your personal goals, your interests, and your pace.
             Whether you&rsquo;re an adult hitting a cymbal for the first time or
             a seven-year-old who's been playing in the family band since the age
