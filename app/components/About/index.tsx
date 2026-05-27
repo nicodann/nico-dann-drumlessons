@@ -10,7 +10,7 @@ export default function About() {
     { label: "CUNY Queens College", detail: "MMus Jazz Performance" },
     { label: "Banff Centre", detail: "Residencies and Workshops" },
     {
-      label: "Pravate Study",
+      label: "Private Study",
       detail:
         "I've been fortunate to be able to study with many great teachers, including Jim Black, Jim Blackley, Remy Bolduc, Antonio Hart, Dave Patel, Michelle Lambert, Chris McCann, Bob Moses, John Riley and Nasheet Waits",
     },
@@ -44,11 +44,11 @@ export default function About() {
           <p>
             I&rsquo;ve taught privately and in schools for over 15 years,
             including a long-running position at Bayview Glen School, where I
-            tought percussion and piano to students from Grades 1 through 12.
+            taught percussion and piano to students from Grades 1 through 12.
             I&rsquo;m patient, I&rsquo;m encouraging, and I genuinely care about
-            helping you grow. A life-long learner I'm always trying to pick up
-            new ideas and re-think the way I'm emparting knowledge to my own
-            students.
+            helping you grow. A life-long learner myself, I'm always trying to
+            pick up new ideas and re-think the way I'm emparting knowledge to my
+            own students.
           </p>
         </div>
 
