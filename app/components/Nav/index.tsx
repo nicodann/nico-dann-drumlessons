@@ -32,7 +32,7 @@ export default function Nav({
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <button
           onClick={() => smoothScroll("hero")}
-          className={`font-display text-xl tracking-wide transition-colors ${
+          className={`text-xl tracking-wide transition-colors uppercase ${
             scrolled
               ? "text-[#1a1a1a] hover:text-[#3d6b50]"
               : "text-[#f2f0ed] hover:text-[#a3c4a8]"

@@ -5,7 +5,7 @@ import "./globals.css";
 const displayFont = DM_Serif_Display({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-display",
+  variable: "--font-heading",
   display: "swap",
 });
 
