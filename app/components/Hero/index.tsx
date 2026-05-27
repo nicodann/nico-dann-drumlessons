@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 // ─── Hero ───────────────────────────────────────────────────────────────
@@ -19,10 +20,12 @@ export default function Hero({
     >
       {/* Background — replace src with your hero image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/hero.jpg"
           alt="Nico Dann playing drums"
+          fill
           className="w-full h-full object-cover object-[50%_40%]"
+          priority
         />
         <div className="absolute inset-0 bg-linear-to-b from-[#1a1a1a]/60 via-[#1a1a1a]/40 to-[#f8f7f4]" />
       </div>
