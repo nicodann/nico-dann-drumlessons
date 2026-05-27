@@ -14,12 +14,14 @@ export default function Footer() {
             alt="Neurodiversity affirming infinity symbol"
             width={40}
             height={36}
+            style={{ height: "auto" }}
           />
           <Image
             src="/Progress Pride Heart.svg"
             alt="Neurodiversity affirming infinity symbol"
             width={30}
             height={26}
+            style={{ height: "auto" }}
           />
         </div>
         <p>Drum lessons in Toronto&rsquo;s east end.</p>

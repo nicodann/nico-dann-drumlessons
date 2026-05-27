@@ -7,6 +7,29 @@ const NAV_ITEMS = [
   { label: "Live", href: "https://nicodann.com" },
 ];
 
+const NavItem = ({
+  item,
+  classNames,
+  smoothScroll,
+}: {
+  item: (typeof NAV_ITEMS)[number];
+  classNames: string;
+  smoothScroll: (id: string) => void;
+}) => {
+  return item.href.startsWith("#") ? (
+    <button
+      onClick={() => smoothScroll(item.href.slice(1))}
+      className={classNames}
+    >
+      {item.label}
+    </button>
+  ) : (
+    <a className={classNames} href={item.href}>
+      {item.label}
+    </a>
+  );
+};
+
 export default function Nav({
   smoothScroll,
 }: {
@@ -14,16 +37,10 @@ export default function Nav({
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const NavItemClassname = `
-    transition-colors 
-    text-sm 
-    tracking-widest 
-    uppercase 
-  ${
-    scrolled
-      ? "text-[#6b665c] hover:text-[#3d6b50]"
-      : "text-[#f2f0ed]/70 hover:text-[#a3c4a8]"
-  }`;
+
+  const desktopNavItemClassname = `transition-colors text-sm tracking-widest uppercase ${scrolled ? "text-[#6b665c] hover:text-[#3d6b50]" : "text-[#f2f0ed]/70 hover:text-[#a3c4a8]"}`;
+
+  const mobileNavItemClassname = `${desktopNavItemClassname} block w-full text-left py-3`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -53,25 +70,14 @@ export default function Nav({
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-8">
-          {NAV_ITEMS.map((item) => {
-            console.log("item.href:", item.href.slice(1));
-            return (
-              <li key={item.href}>
-                {item.href.startsWith("#") ? (
-                  <button
-                    onClick={() => smoothScroll(item.href.slice(1))}
-                    className={NavItemClassname}
-                  >
-                    {item.label}
-                  </button>
-                ) : (
-                  <a className={NavItemClassname} href={item.href}>
-                    {item.label}
-                  </a>
-                )}
-              </li>
-            );
-          })}
+          {NAV_ITEMS.map((item) => (
+            <NavItem
+              item={item}
+              classNames={desktopNavItemClassname}
+              key={item.href}
+              smoothScroll={smoothScroll}
+            />
+          ))}
         </ul>
 
         {/* Mobile toggle */}
@@ -107,20 +113,12 @@ export default function Nav({
           }`}
         >
           {NAV_ITEMS.map((item) => (
-            <button
+            <NavItem
+              item={item}
+              classNames={mobileNavItemClassname}
               key={item.href}
-              onClick={() => {
-                smoothScroll(item.href.slice(1));
-                setMenuOpen(false);
-              }}
-              className={`block w-full text-left py-3 transition-colors text-sm tracking-widest uppercase ${
-                scrolled
-                  ? "text-[#6b665c] hover:text-[#3d6b50]"
-                  : "text-[#f2f0ed]/70 hover:text-[#a3c4a8]"
-              }`}
-            >
-              {item.label}
-            </button>
+              smoothScroll={smoothScroll}
+            />
           ))}
         </div>
       )}
