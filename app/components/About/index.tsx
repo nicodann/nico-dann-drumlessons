@@ -33,13 +33,13 @@ export default function About() {
           </p>
           <p>
             As an educator, I believe every student learns differently as we are
-            all unique people. I'm commited to fostering an environment that is
-            welcoming, queer positive, and neuro-inclusive. I tailor every
-            lesson to match your personal goals, your interests, and your pace.
-            Whether you&rsquo;re an adult hitting a cymbal for the first time or
-            a seven-year-old who's been playing in the family band since the age
-            of three, my job is to make the experience fun, rewarding, and
-            musical from day one.
+            all unique people. I tailor every lesson to match your personal
+            goals, your interests, and your pace. I'm also commited to fostering
+            an environment that is welcoming, queer positive, and
+            neuro-inclusive. Whether you&rsquo;re an adult hitting a cymbal for
+            the first time or a seven-year-old who's been playing in the family
+            band since the age of three, my job is to make the experience fun,
+            rewarding, and musical from day one.
           </p>
           <p>
             I&rsquo;ve taught privately and in schools for over 15 years,
