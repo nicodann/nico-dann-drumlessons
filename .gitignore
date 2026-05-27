@@ -27,7 +27,6 @@ out/
 .env.*.local
 
 # Google API and credentials
-*.json
 credentials.json
 client_secret.json
 service-account.json
