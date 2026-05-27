@@ -4,9 +4,9 @@ const NAV_ITEMS = [
   { label: "About", href: "#about" },
   { label: "Lessons", href: "#lessons" },
   { label: "Contact", href: "#contact" },
+  { label: "Live", href: "https://nicodann.com" },
 ];
 
-// ─── Nav ────────────────────────────────────────────────────────────────
 export default function Nav({
   smoothScroll,
 }: {
@@ -14,6 +14,16 @@ export default function Nav({
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const NavItemClassname = `
+    transition-colors 
+    text-sm 
+    tracking-widest 
+    uppercase 
+  ${
+    scrolled
+      ? "text-[#6b665c] hover:text-[#3d6b50]"
+      : "text-[#f2f0ed]/70 hover:text-[#a3c4a8]"
+  }`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -43,20 +53,25 @@ export default function Nav({
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-8">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.href}>
-              <button
-                onClick={() => smoothScroll(item.href.slice(1))}
-                className={`transition-colors text-sm tracking-widest uppercase ${
-                  scrolled
-                    ? "text-[#6b665c] hover:text-[#3d6b50]"
-                    : "text-[#f2f0ed]/70 hover:text-[#a3c4a8]"
-                }`}
-              >
-                {item.label}
-              </button>
-            </li>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            console.log("item.href:", item.href.slice(1));
+            return (
+              <li key={item.href}>
+                {item.href.startsWith("#") ? (
+                  <button
+                    onClick={() => smoothScroll(item.href.slice(1))}
+                    className={NavItemClassname}
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <a className={NavItemClassname} href={item.href}>
+                    {item.label}
+                  </a>
+                )}
+              </li>
+            );
+          })}
         </ul>
 
         {/* Mobile toggle */}

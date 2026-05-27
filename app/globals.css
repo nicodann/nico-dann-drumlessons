@@ -9,6 +9,10 @@ html {
   scroll-behavior: smooth;
 }
 
+button {
+  cursor: pointer;
+}
+
 ::selection {
   background-color: rgb(61 107 80 / 0.25);
   color: inherit;
