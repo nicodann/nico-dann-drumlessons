@@ -11,7 +11,7 @@ export default function Lessons({
       icon: "🥁",
       title: "Private Drum Lessons",
       description:
-        "One-on-one instruction tailored to your level and goals. Topics can include technique, reading, rudiments, styles, and — most importantly — making beautiful sounds!",
+        "One-on-one instruction tailored to your level and goals. Topics can include technique, grooves, rudiments, styles, sound-production, reading and — most importantly — making music!",
     },
     {
       icon: "🎵",
@@ -23,7 +23,7 @@ export default function Lessons({
       icon: "🎧",
       title: "Modern Approach",
       description:
-        "I integrate technology, play-along tracks, and recording into lessons so you can hear your progress and stay motivated. I also play guitar and bass and love to jam with my students!",
+        "I love to integrate technology, play-along tracks, and recording into lessons so you can hear your progress and stay motivated. I also play guitar and bass and love to jam with my students!",
     },
   ];
 
