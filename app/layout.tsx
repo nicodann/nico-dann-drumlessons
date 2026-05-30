@@ -45,6 +45,13 @@ export const metadata: Metadata = {
     description:
       "Private drum lessons for all ages and levels near Greenwood & Danforth.",
     type: "website",
+    images: [
+      {
+        url: "https://lessons.nicodann.com/hero.jpg",
+        width: "736px",
+        height: "736px",
+      },
+    ],
   },
 };
 
