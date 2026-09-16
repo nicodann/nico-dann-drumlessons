@@ -24,7 +24,7 @@ export default function Footer() {
             style={{ height: "auto" }}
           />
         </div>
-        <p>Drum lessons in Toronto&rsquo;s east end.</p>
+        <p>Drum lessons in Toronto&rsquo;s east end. </p>
       </div>
     </footer>
   );

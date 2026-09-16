@@ -49,6 +49,17 @@ export default function Contact() {
               <span>Greenwood &amp; Danforth, East Toronto</span>
             </div>
           </div>
+          <div>
+            {" "}
+            <a
+              href="https://share.google/SBtedlQ4yV7wyCEOC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#3d6b50] hover:text-[#4a7d5e] hover:opacity-50 transition-colors"
+            >
+              👉 Check us out on Google and leave a review!
+            </a>
+          </div>
         </div>
 
         <div>

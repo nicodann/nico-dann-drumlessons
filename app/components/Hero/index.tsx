@@ -31,29 +31,47 @@ export default function Hero({
       </div>
 
       <div
-        className={`relative z-10 text-center px-6 max-w-3xl transition-all duration-1000 ${
+        className={`flex flex-col items-center gap-12 relative z-10 text-center px-6 max-w-3xl transition-all duration-1000 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <p className="text-[#a3c4a8] tracking-[0.35em] uppercase text-sm mb-4 font-medium">
-          Drum Lessons in East Toronto
-        </p>
-        <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-[#f2f0ed] leading-tight mb-6">
-          Learn Drums
-          <br />
-          <span className="text-[#a3c4a8]">with Nico Dann</span>
-        </h1>
-        <p className="text-[#f2f0ed]/60 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
-          Patient, personalised instruction for all ages and levels.
-          <br className="hidden sm:block" />
-          Studio located at Greenwood &amp; Danforth.
-        </p>
-        <button
-          onClick={() => smoothScroll("contact")}
-          className="inline-block bg-[#3d6b50] hover:bg-[#4a7d5e] text-white font-semibold px-8 py-4 rounded-full text-sm tracking-wider uppercase transition-colors"
-        >
-          Book a Free Intro Lesson
-        </button>
+        <div className="flex flex-col items-center gap-6">
+          <p className="text-[#a3c4a8] tracking-[0.35em] uppercase text-sm font-medium">
+            Drum Lessons in East Toronto
+          </p>
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-[#f2f0ed] leading-tight">
+            Learn Drums
+            <br />
+            <span className="text-[#a3c4a8]">with Nico Dann</span>
+          </h1>
+          <p className="text-[#f2f0ed]/60 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed">
+            Patient, personalised instruction for all ages and levels.
+            <br className="hidden sm:block" />
+            Studio located at Greenwood &amp; Danforth.
+          </p>
+          <button
+            onClick={() => smoothScroll("contact")}
+            className="inline-block bg-[#3d6b50] hover:bg-[#4a7d5e] text-white font-semibold px-8 py-4 rounded-full text-sm tracking-wider uppercase transition-colors"
+          >
+            Book a Free Intro Lesson
+          </button>
+        </div>
+        <figure className="max-w-lg mx-auto pt-2 backdrop-blur-sm rounded-2xl px-6 py-5">
+          {/* <figure className="max-w-lg mx-auto pt-2"> */}
+          <blockquote className="text-[#f2f0ed] text-base italic leading-relaxed">
+            {/* <blockquote
+            className="text-[#f2f0ed] text-base italic leading-relaxed"
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
+          > */}
+            "Incredible drum lessons — such patience and understanding of who
+            our daughter is as a learner, catering to her styles and approaches.
+            She leaves lessons every week with a smile, and it has built her
+            confidence and competence at playing the drums."
+          </blockquote>
+          <figcaption className="mt-3 text-[#f2f0ed] text-sm tracking-wide">
+            — Daniel F.
+          </figcaption>
+        </figure>
       </div>
 
       {/* Scroll indicator */}
