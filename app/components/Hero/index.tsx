@@ -56,9 +56,9 @@ export default function Hero({
             Book a Free Intro Lesson
           </button>
         </div>
-        <figure className="max-w-lg mx-auto pt-2 backdrop-blur-sm rounded-2xl px-6 py-5">
+        <figure className="max-w-[400px] mx-auto px-6 py-5">
           {/* <figure className="max-w-lg mx-auto pt-2"> */}
-          <blockquote className="text-[#f2f0ed] text-base italic leading-relaxed">
+          <blockquote className="text-[#1a1a1a] text-base italic leading-relaxed">
             {/* <blockquote
             className="text-[#f2f0ed] text-base italic leading-relaxed"
             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
@@ -68,7 +68,7 @@ export default function Hero({
             She leaves lessons every week with a smile, and it has built her
             confidence and competence at playing the drums."
           </blockquote>
-          <figcaption className="mt-3 text-[#f2f0ed] text-sm tracking-wide">
+          <figcaption className="mt-3 text-[#1a1a1a] text-sm tracking-wide">
             — Daniel F.
           </figcaption>
         </figure>
