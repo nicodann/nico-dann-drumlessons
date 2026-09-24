@@ -7,7 +7,7 @@ export default function About() {
       label: "McGill University",
       detail: "BMus Jazz Performance",
     },
-    { label: "CUNY Queens College", detail: "MMus Jazz Performance" },
+    { label: "CUNY Queens College (NYC)", detail: "MMus Jazz Performance" },
     { label: "Banff Centre", detail: "Residencies and Workshops" },
     {
       label: "Private Study",
